@@ -1,3 +1,7 @@
+<?php
+session_destroy();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -50,5 +54,6 @@
     ?>
   </div>
 </div>
+
 </body>
 </html>
