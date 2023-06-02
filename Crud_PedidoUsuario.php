@@ -1,11 +1,13 @@
 <?php
+ session_start();
+if(!isset($_SESSION['usuario']))
+    header("location: login.php");
 include("connection.php");
 $con = connection();
 
 $sql = "SELECT * FROM pedido";
 $query = mysqli_query($con, $sql);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 

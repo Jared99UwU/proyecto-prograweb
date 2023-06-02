@@ -1,9 +1,13 @@
 <?php
+session_start();
+if(!isset($_SESSION['usuario']))
+    header("location: login.php");
 include("connection.php");
 $con = connection();
 
 $sql = "SELECT * FROM cliente";
 $query = mysqli_query($con, $sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -41,6 +45,7 @@ $query = mysqli_query($con, $sql);
             <a href="Menu_admin.php" class="orange-button">Pagina principal</a>
             <a href="reportes_cliente.php" class="yellow-button">Generar PDF</a>
             <a href="excel_cliente.php" class="blue-button">Generar Excel</a>
+            <a href="grafica_cliente.php" class="purple-button">Graficas</a>
 
         </form>
     </div>

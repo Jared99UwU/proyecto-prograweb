@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(!isset($_SESSION['usuario']))
+    header("location: login.php");
+include("connection.php");
 include("connection.php");
 $con = connection();
 
