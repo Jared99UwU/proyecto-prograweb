@@ -33,7 +33,7 @@ $query = mysqli_query($con, $sql);
     
         <h1>Crear Nuevo Pedido</h1>
         
-        <form action="insert_pedido.php" method="POST">
+        <form action="insert_pedido2.php" method="POST">
         
             <input type="text" name="No_pedido" placeholder="Referencia">
             <input type="text" name="descripcion" placeholder="Descripcion del pedido">
